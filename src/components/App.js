@@ -1,17 +1,17 @@
-import {useState} from 'react'
+import {useContext} from 'react'
 import Navbar from './Navbar'
 import PaintingDetails from './PaintingDetails'
 import Gallery from './Gallery'
+import PainterContext from '../context/PainterContext'
 
 function App() {
-  const [paintings, setPaintings] = useState([])
-  const [currentPainting, setCurrentPainting] = useState(null)
+  const {currentPainting} = useContext(PainterContext)
 
   return (
-    <div className="App">
+    <div id="App" className="App">
       <Navbar />
       {currentPainting ? <PaintingDetails /> : null}
-      <Gallery paintingsList={paintings}/>
+      <Gallery/>
     </div>
   );
 }

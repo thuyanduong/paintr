@@ -1,21 +1,30 @@
-function PaintingDetails({painting}){
+import { useContext } from "react"
+import PainterContext from "../context/PainterContext"
+
+function PaintingDetails(){
+  const {currentPainting} = useContext(PainterContext)
+
   return (
-    <div className="ui card">
-      <div>
-        <img src={painting.image} alt={painting.title} />
-        <h3>
-          {painting.title}
-        </h3>
-        <div>{`Artist: ${painting.artist.name}`}</div>
-        <div>{`Born: ${painting.artist.birthday}`}</div>
-        <div>{`Died: ${painting.artist.deathday}`}</div>
-        <div>{`Date: ${painting.date}`}</div>
-        <div>
-          {`Dimensions: ${painting.dimensions.width} in. x ${painting.dimensions.height} in.`}
+    <>
+      <h1>Painting Details</h1>
+      <div className="ui segment">
+        <div className="ui fluid card">
+          <div>
+            <img src={currentPainting.image} alt={currentPainting.title} />
+            <h3>
+              {currentPainting.title}
+            </h3>
+            <div>{`Artist: ${currentPainting.artist.name}`}</div>
+            <div>{`Born: ${currentPainting.artist.birthday}`}</div>
+            <div>{`Died: ${currentPainting.artist.deathday}`}</div>
+            <div>{`Date: ${currentPainting.date}`}</div>
+            <div>
+              {`Dimensions: ${currentPainting.dimensions.width} in. x ${currentPainting.dimensions.height} in.`}
+            </div>
+          </div>
         </div>
       </div>
-      <button>Back to Gallery</button>
-    </div>
+    </>
   )
 }
   

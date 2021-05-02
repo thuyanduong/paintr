@@ -1,15 +1,20 @@
+import {useContext} from 'react'
+import PainterContext from '../context/PainterContext'
+
 function Painting({painting}){
-    return(
-      <div className="ui card">
+  const {setCurrentPainting} = useContext(PainterContext)
+
+  return(
+    <div className="ui centered card">
+      <div>
+        <img src={painting.image} alt={painting.title}/>
         <div>
-          <img src={painting.image} alt={painting.title}/>
-          <div>
-            {painting.title}
-          </div>
+          {painting.title}
         </div>
-        <button>More Info</button>
       </div>
-    )
-  }
-  
+      <button onClick={()=>{setCurrentPainting(painting)}}>More Info</button>
+    </div>
+  )
+}
+
   export default Painting
