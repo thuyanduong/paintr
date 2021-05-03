@@ -1,6 +1,6 @@
 # Paintr App 
 
-We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is be able to understand starter code. Run this app on your local computer and answer the Short Response Questions below.
+We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is being able to understand starter code. Run this app on your local computer and answer the Short Response Questions below.
 
 ## Set Up
 
@@ -14,7 +14,7 @@ Check that your server is up and running by visiting http://localhost:4000/paint
 
 ### Front-End
 
-Inside the project, run `npm install` to download dependencies. Then, run `npm start` to start the App.
+Open up another temrinal tab. Inside the project, run `npm install` to download dependencies. Then, run `npm start` to start the App.
 
 ## Short Reponse
 
@@ -22,11 +22,11 @@ Inside the project, run `npm install` to download dependencies. Then, run `npm s
 
 2. What is the component hierarchy of this app?
 
-3. What is the state of this app? What does each piece of state **represent** on the DOM?
+3. What are all the pieces of state of this app? What does each piece of state **represent** on the DOM?
 
 4. Is there any component that is conditionally rendered?
   
-5. If there is conditional rendering, does this component appear on the DOM when the page first loads?
+5. If there is conditional rendering, does this component appear on the DOM when the app first loads?
 
 6. If there is conditional rendering, what does the **user** need to do to trigger this conditional rendering?
 
