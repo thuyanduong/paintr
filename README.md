@@ -1,6 +1,6 @@
 # Paintr App 
 
-We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is being able to understand starter code. Run this app on your local computer and answer the Short Response Questions below.
+We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is being able to understand starter code. Run this app on your local computer. Play around with the app and review the code in order to answer the Short Response Questions below.
 
 ## Set Up
 
