@@ -1,11 +1,8 @@
-import {useContext} from 'react'
-import PainterContext from '../context/PainterContext'
-
-function Painting({painting}){
-  const {setCurrentPainting} = useContext(PainterContext)
+function Painting(props){
+  const {painting, setCurrentPainting} = props
 
   return(
-    <div className="ui centered card">
+    <div className="ui card">
       <div>
         <img src={painting.image} alt={painting.title}/>
         <div>

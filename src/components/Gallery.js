@@ -1,12 +1,21 @@
 import Searchbar from './Searchbar'
 import PaintingsContainer from './PaintingsContainer'
 
-function Gallery(){
+function Gallery(props){
+  const {searchTerm, setSearchTerm, paintings, setCurrentPainting} = props
+  
   return (
     <>
       <h1>Gallery</h1>
-      <Searchbar />
-      <PaintingsContainer/>
+      <Searchbar 
+        searchTerm={searchTerm} 
+        setSearchTerm={setSearchTerm}
+      />
+      <PaintingsContainer 
+        searchTerm={searchTerm} 
+        paintings={paintings} 
+        setCurrentPainting={setCurrentPainting}
+      />
     </>
   )
 }

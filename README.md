@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Paintr App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is be able to understand starter code. Run this app on your local computer and answer the Short Response Questions below.
 
-## Available Scripts
+## Set Up
 
-In the project directory, you can run:
+This app uses a React front-end and a JSON Server mock back-end. 
 
-### `npm start`
+### Back-End
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Inside the project, run `json-server data.json --port 4000` to start the RESTful JSON Server. If you don't have JSON Server installed, install it using `npm install -g json-server`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Check that your server is up and running by visiting http://localhost:4000/paintings
 
-### `npm test`
+### Front-End
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inside the project, run `npm install` to download dependencies. Then, run `npm start` to start the App.
 
-### `npm run build`
+## Short Reponse
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. In a couple of sentences, what does this app do?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. What is the component hierarchy of this app?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. What is the state of this app? What does each piece of state **represent** on the DOM?
 
-### `npm run eject`
+4. Is there any component that is conditionally rendered?
+  
+5. If there is conditional rendering, does this component appear on the DOM when the page first loads?
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+6. If there is conditional rendering, what does the **user** need to do to trigger this conditional rendering?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. Who is the artist who painted "Seated Bishop", and when did this artist die?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+8. What are the dimensions of the painting "Flower Still Life"?

@@ -1,8 +1,5 @@
-import { useContext } from "react"
-import PainterContext from "../context/PainterContext"
-
-function PaintingDetails(){
-  const {currentPainting} = useContext(PainterContext)
+function PaintingDetails(props){
+  const {currentPainting} = props
 
   return (
     <>

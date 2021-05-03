@@ -1,33 +1,35 @@
-import { useEffect, useState } from 'react'
-import PainterContext from './PainterContext'
+// NOTE: WORK IN PROGRESS
 
-function PainterProvider(props){
-    const [currentPainting, setCurrentPainting] = useState(null)
-    const [searchTerm, setSearchTerm] = useState("")
-    const [paintings, setPaintings] = useState([])
+// import { useEffect, useState } from 'react'
+// import PainterContext from './PainterContext'
 
-    useEffect(()=>{
-        fetch("http://localhost:4000/paintings")
-        .then(res => res.json())
-        .then(paintings => {
-            setPaintings(paintings)
-        })
-    }, [])
+// function PainterProvider(props){
+//     const [currentPainting, setCurrentPainting] = useState(null)
+//     const [searchTerm, setSearchTerm] = useState("")
+//     const [paintings, setPaintings] = useState([])
 
-    const value = {
-        currentPainting, 
-        setCurrentPainting, 
-        searchTerm, 
-        setSearchTerm,
-        paintings,
-        setPaintings
-    }
+//     useEffect(()=>{
+//         fetch("http://localhost:4000/paintings")
+//         .then(res => res.json())
+//         .then(paintings => {
+//             setPaintings(paintings)
+//         })
+//     }, [])
 
-    return (
-        <PainterContext.Provider value={value}>
-            {props.children}
-        </PainterContext.Provider>
-    )
-}
+//     const value = {
+//         currentPainting, 
+//         setCurrentPainting, 
+//         searchTerm, 
+//         setSearchTerm,
+//         paintings,
+//         setPaintings
+//     }
 
-export default PainterProvider
+//     return (
+//         <PainterContext.Provider value={value}>
+//             {props.children}
+//         </PainterContext.Provider>
+//     )
+// }
+
+// export default PainterProvider
