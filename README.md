@@ -1,4 +1,4 @@
-# [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+# [React Router](https://reactrouter.com/docs/en/v6/getting-started/installation)
 
 ## What is Client Side Routing and How does it differ from Server Side Routing?
 * Everytime we requested a new URL in express, explain the request response cycle
@@ -30,38 +30,29 @@
 - Will use 1 place in our application (and one place only) at the very top level
 - Sometimes aliased
 - `import {BrowserRouter as Router} from 'react-router-dom'`
+- Wrap all `<Route>` components in a `<Routes>` component
 
 If the URL is `/about` => render the About component
 
 ### Route
 - Conditionally render a certain component based on if the path of the url matches the path prop
-- `component` prop
-- What does the exact prop do?
-- `render` prop
+- `path` prop
+- `element` prop
 
-Problem: Given a URL of `/paintings/:id`
-* figure out which painting to display
-
-Solution: 
-* we have a state called `paintings`
-* iterate through our `paintings` state to find painting that matches `:id`
-
-### Routes Params `/:id`
-- You can forward the Router Props!
-- Or you can use the `useParams` Hook!
-
-### Changing the URL
-- `routerProps.history.push(relativeUrl)`
-- Or use the {Link} component
+## How can we render a 404 Page? What about a Redirect?
+- `<Navigate to="">` component
 
 ### Link
 - Changes the url we see in the browser without a reload, must have a 'to' prop
 - Route components will re-render and show components based on new url
 - works with the browser's native back and forward controls
 
-### Switch
-- Pick one of the following routes (the first that matches) and load that component
-- Doesn't look at the others (like an if/ else if/ else if)
-- Takes in no props
+### Routes Params `/:id`
+- `<Route path="/paintings/:id" element={<PaintingDetails/>}/>`
+- Then, you can use the `useParams` Hook in the component!
+- But we need to figure out which painting to display
+      Solution: 
+      * we have a state called `paintings`
+      * iterate through our `paintings` state to find painting that matches `:id`
 
-### Refactor to `useContext`
+
