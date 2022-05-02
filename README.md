@@ -1,35 +1,67 @@
-# Paintr App 
+# [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 
-We are going to be studying this starter code in order to prep for our lesson on React Router. A valuable skill to build up is being able to understand starter code. Run this app on your locally computer. Play around with the app and review the code in order to answer the Short Response Questions below.
+## What is Client Side Routing and How does it differ from Server Side Routing?
+* Everytime we requested a new URL in express, explain the request response cycle
+* How does JS handle changes in the URL?
+* `history.back()`, `history.forward()`, `history.pushState({}, "", "/maya")`
+* React Router uses these tools to change the URL and uses conditional rendering to display only certain components!!
 
-## Set Up
+### Paintr
+```
+* App
+    |- Navbar
+    |- About
+    |- PaintingDetails
+    |- Gallery
+        |- Searchbar
+        |- PaintingsContainer
+              |- PaintingCard
+```
 
-This app uses a React front-end and a JSON Server mock back-end. 
+### Goal:
+1. Build out many 'views'
+1a. the URLs take you to a certain view
+2. Build out navigation tools to get from one page to another
 
-### Back-End
+### Set Up
+- `npm install react-router-dom`
 
-Inside the project, run `json-server data.json --port 4000` to start the RESTful JSON Server. If you don't have JSON Server installed, install it using `npm install -g json-server`.
+### BrowserRouter
+- Will use 1 place in our application (and one place only) at the very top level
+- Sometimes aliased
+- `import {BrowserRouter as Router} from 'react-router-dom'`
 
-Check that your server is up and running by visiting http://localhost:4000/paintings
+If the URL is `/about` => render the About component
 
-### Front-End
+### Route
+- Conditionally render a certain component based on if the path of the url matches the path prop
+- `component` prop
+- What does the exact prop do?
+- `render` prop
 
-Open up another temrinal tab. Inside the project, run `npm install` to download dependencies. Then, run `npm start` to start the App.
+Problem: Given a URL of `/paintings/:id`
+* figure out which painting to display
 
-## Short Reponse
+Solution: 
+* we have a state called `paintings`
+* iterate through our `paintings` state to find painting that matches `:id`
 
-1. In a couple of sentences, what does this app do?
+### Routes Params `/:id`
+- You can forward the Router Props!
+- Or you can use the `useParams` Hook!
 
-2. What is the component hierarchy of this app?
+### Changing the URL
+- `routerProps.history.push(relativeUrl)`
+- Or use the {Link} component
 
-3. What are all the pieces of state of this app? What does each piece of state **represent** on the DOM?
+### Link
+- Changes the url we see in the browser without a reload, must have a 'to' prop
+- Route components will re-render and show components based on new url
+- works with the browser's native back and forward controls
 
-4. Is there any component that is conditionally rendered?
-  
-5. If there is conditional rendering, does this component appear on the DOM when the app first loads?
+### Switch
+- Pick one of the following routes (the first that matches) and load that component
+- Doesn't look at the others (like an if/ else if/ else if)
+- Takes in no props
 
-6. If there is conditional rendering, what does the **user** need to do to trigger this conditional rendering?
-
-7. Who is the artist who painted "Seated Bishop", and when did this artist die?
-
-8. What are the dimensions of the painting "Flower Still Life"?
+### Refactor to `useContext`
