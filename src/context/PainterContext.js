@@ -1,7 +1,6 @@
-// NOTE: WORK IN PROGRESS
 
-// import {createContext} from 'react'
+import {createContext} from 'react'
 
-// const PainterContext = createContext()
+const PainterContext = createContext()
 
-// export default PainterContext
+export default PainterContext

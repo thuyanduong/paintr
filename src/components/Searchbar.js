@@ -1,5 +1,8 @@
-function Searchbar(props){
-  const {searchTerm, setSearchTerm} = props
+import { useContext } from "react"
+import PainterContext from "../context/PainterContext"
+
+function Searchbar(){
+  const {searchTerm, setSearchTerm} = useContext(PainterContext)
 
   return (
     <div className="ui large icon input">

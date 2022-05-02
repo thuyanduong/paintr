@@ -1,8 +1,11 @@
-function PaintingDetails(props){
-  const {currentPainting} = props
+import { useContext } from "react"
+import PainterContext from "../context/PainterContext"
+
+function PaintingDetails(){
+  const {currentPainting} = useContext(PainterContext)
 
   return (
-    <>
+    <div>
       <h1>Painting Details</h1>
       <div className="ui segment">
         <div className="ui fluid card">
@@ -21,7 +24,7 @@ function PaintingDetails(props){
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
   

@@ -1,15 +1,15 @@
 function NavBar(){
   return(
     <div className="ui inverted blue menu navbar">
-      <a href="#App" className="item">
+      <a className="item">
         <h2 className="ui header">
           <i className="paint brush icon"></i>
           <div className="content">Paintr</div>
-          <div className="sub header">Beautiful Paintings</div>
+          <div className="sub header">Some Ye Ole Paintings</div>
         </h2>
       </a>
-      <a href="#App" className="item">About</a>
-      <a href="#App" className="item">Gallery</a>
+      <a className="item">About</a>
+      <a className="item">Gallery</a>
     </div>
   )
 }
